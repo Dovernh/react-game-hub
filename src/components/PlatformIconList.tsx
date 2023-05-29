@@ -11,14 +11,14 @@ import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 
-import { Platform } from "../hooks/useGames";
 import { IconType } from "react-icons";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   platforms: Platform[];
 }
 
-export const PlatformIconList = ({ platforms }: Props) => {
+export const PlatformIconList = ({ platforms = [] }: Props) => {
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
